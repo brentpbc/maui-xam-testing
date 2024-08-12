@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<v:BasePage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:v="clr-namespace:CollectionViewTestAppXam.Views"
+    xmlns:viewmodel="clr-namespace:CollectionViewTestAppXam.ViewModels"
+    xmlns:models="clr-namespace:CollectionViewTestAppXam.Models"
+    x:Class="CollectionViewTestAppXam.Views.BasicCollectionViewPage"    
+    BackgroundColor="LightGray"
+    Title="Basic CollectionView Page"
+    x:DataType="viewmodel:BasicCollectionViewViewModel">
+    <ContentPage.Content>
+        <Grid>
+            <CollectionView 
+                ItemsSource="{Binding Logs}"
+                ItemSizingStrategy="MeasureFirstItem">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="models:LogInfo">
+                        <Grid Padding="8,4,8,4">
+                            <Frame BackgroundColor="White" HasShadow="False" CornerRadius="10" >
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="25"/>
+                                        <RowDefinition Height="25"/>
+                                    </Grid.RowDefinitions>
+                                    <Label Grid.Row="0" Text="{Binding CreatedDate, StringFormat='{0:dd/MM/yyyy hh:mm:ss fffff}'}" TextColor="DarkSlateGray" MaxLines="1"/>
+                                    <Label Grid.Row="1" Text="{Binding ErrorDescription}" MaxLines="1"/>
+                                </Grid>
+                            </Frame>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </Grid>
+    </ContentPage.Content>
+</v:BasePage>
+

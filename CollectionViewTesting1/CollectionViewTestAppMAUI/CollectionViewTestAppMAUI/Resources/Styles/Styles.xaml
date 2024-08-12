@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<?xaml-comp compile="true" ?>
+<ResourceDictionary 
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    
+    <Color x:Key="Primary">#1976d2</Color>
+    <Color x:Key="TextColorDarkBg">White</Color>
+    <Style x:Key="PrimaryButtonStyle" TargetType="Button">
+        <Setter Property="CornerRadius" Value="8"/>
+        <Setter Property="Padding" Value="10"/>
+        <Setter Property="BackgroundColor" Value="{StaticResource Primary}"/>
+        <Setter Property="TextColor" Value="{DynamicResource TextColorDarkBg}"/>
+    </Style>
+    <Style TargetType="Page" ApplyToDerivedTypes="True">
+        <Setter Property="BackgroundColor" Value="White" />
+    </Style>
+    <Style TargetType="Label" ApplyToDerivedTypes="True">
+        <Setter Property="TextColor" Value="Black" />
+    </Style>
+</ResourceDictionary>
