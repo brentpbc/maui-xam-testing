@@ -9,10 +9,10 @@ namespace CollectionViewTestAppMAUI.Views;
 
 public partial class BasicCollectionViewPage : BasePage
 {
-    CollectionViewViewModel ViewModel;
+    EventTestViewModel ViewModel;
     public BasicCollectionViewPage()
     {
         InitializeComponent();
-        BindingContext = ViewModel = new CollectionViewViewModel();
+        BindingContext = ViewModel = new EventTestViewModel();
     }
 }

@@ -6,25 +6,25 @@
              xmlns:viewmodel="clr-namespace:CollectionViewTestAppMAUI.ViewModels"
              xmlns:models="clr-namespace:CollectionViewTestAppMAUI.Models"
              x:Class="CollectionViewTestAppMAUI.Views.BasicCollectionViewPage"
-             x:DataType="viewmodel:CollectionViewViewModel"
+             x:DataType="viewmodel:EventTestViewModel"
              BackgroundColor="LightGray"
              Title="Basic CollectionView Page">
     <ContentPage.Content>
         <Grid>
             <CollectionView 
-                ItemsSource="{Binding Logs}"
+                ItemsSource="{Binding Events}"
                 ItemSizingStrategy="MeasureFirstItem">
                 <CollectionView.ItemTemplate>
-                    <DataTemplate x:DataType="models:LogInfo">
+                    <DataTemplate x:DataType="models:JobEvent">
                         <Grid Padding="8,4,8,4">
-                            <Frame BackgroundColor="White" HasShadow="False" >
+                            <Frame Style="{StaticResource FrameCardStyle}">
                                 <Grid>
                                     <Grid.RowDefinitions>
                                         <RowDefinition Height="25"/>
                                         <RowDefinition Height="25"/>
                                     </Grid.RowDefinitions>
-                                    <Label Grid.Row="0" Text="{Binding CreatedDate, StringFormat='{0:dd/MM/yyyy hh:mm:ss fffff}'}" TextColor="DarkSlateGray" MaxLines="1"/>
-                                    <Label Grid.Row="1" Text="{Binding ErrorDescription}" MaxLines="1"/>
+                                    <Label Grid.Row="0" Text="{Binding DueDate, StringFormat='{0:dd/MM/yyyy}'}" TextColor="DarkSlateGray" MaxLines="1"/>
+                                    <Label Grid.Row="1" Text="{Binding Description}" MaxLines="1"/>
                                 </Grid>
                             </Frame>
                         </Grid>
