@@ -21,6 +21,8 @@
     <None Remove="Views\" />
     <None Remove="Models\" />
     <None Remove="Converters\" />
+    <None Remove="Resources\Fonts\" />
+    <None Remove="Resources\Fonts\fa-solid.otf" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
@@ -28,5 +30,9 @@
     <Folder Include="Views\" />
     <Folder Include="Models\" />
     <Folder Include="Converters\" />
+    <Folder Include="Resources\Fonts\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Fonts\fa-solid.otf" />
   </ItemGroup>
 </Project>

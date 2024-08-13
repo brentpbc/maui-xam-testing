@@ -28,16 +28,18 @@
                                         <ColumnDefinition Width="120" />
                                     </Grid.ColumnDefinitions>
                                     <!-- Checkmark Tick/Box Region -->
-                                    <!-- TODO Implement:
                                     <StackLayout VerticalOptions="FillAndExpand" Padding="0" Margin="0">
-                                       <controls:CheckmarkView CanEdit="{Binding Event.CanEdit}" IsChecked="{Binding Event.IsChecked}" VerticalOptions="CenterAndExpand"/>
-                                        <StackLayout.GestureRecognizers>
-                                            <TapGestureRecognizer NumberOfTapsRequired="1" Command="{Binding OnEventRegister}" CommandParameter="{Binding Event}"/>
-                                        </StackLayout.GestureRecognizers>
-                                    </StackLayout> -->
+                                       <v:CheckmarkView 
+                                           CanEdit="{Binding CanEdit}" 
+                                           IsChecked="{Binding IsChecked}" 
+                                           VerticalOptions="CenterAndExpand"/>
+                                    </StackLayout>
                                     <!-- Event Code and Description Label Region -->
                                     <StackLayout Orientation="Vertical" Grid.Column="1" VerticalOptions="Start" Padding="0" Margin="0">
-                                        <Label Text="{Binding EventNo}" FontSize="{StaticResource FontSizeMedium}" FontAttributes="Bold" MaxLines="1"/> <!-- Max line=1 needed on android or first label takes up entire card -->
+                                        <Label 
+                                            Text="{Binding EventNo}" 
+                                            FontSize="{StaticResource FontSizeMedium}" 
+                                            FontAttributes="Bold" MaxLines="1"/> <!-- Max line=1 needed on android or first label takes up entire card -->
                                         <Label Text="{Binding Description}" 
                                                MaxLines="2" 
                                                LineBreakMode="TailTruncation" 

@@ -13,11 +13,11 @@
           <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <Label Grid.Row="0" Text="CollectionView Test App Maui" FontSize="32" HorizontalOptions="Start" Padding="8"/>
-            <!-- See https://github.com/dotnet/maui/wiki/Memory-Leaks for help diagnosing leaks -->
-            <FlexLayout Wrap="Wrap" JustifyContent="SpaceAround" Grid.Row="1">
-                <Button Margin="0,2" FlexLayout.AlignSelf="Center" Style="{StaticResource PrimaryButtonStyle}" Text="Basic CollectionView Page" Clicked="collectionViewPageButton_OnClicked"/>
-                <Button Margin="0,2" FlexLayout.AlignSelf="Center" Style="{StaticResource PrimaryButtonStyle}" Text="CollectionView 2 Page" Clicked="collectionView2PageButton_OnClicked"/>
-            </FlexLayout>
+            
+        <FlexLayout Wrap="Wrap" JustifyContent="SpaceAround" Grid.Row="1">
+            <Button Margin="0,2" FlexLayout.AlignSelf="Center" Style="{StaticResource PrimaryButtonStyle}" Text="Basic CollectionView Page" Clicked="collectionViewPageButton_OnClicked"/>
+            <Button Margin="0,2" FlexLayout.AlignSelf="Center" Style="{StaticResource PrimaryButtonStyle}" Text="CollectionView 2 Page" Clicked="collectionView2PageButton_OnClicked"/>
+        </FlexLayout>
     </Grid>
 
 </ContentPage>

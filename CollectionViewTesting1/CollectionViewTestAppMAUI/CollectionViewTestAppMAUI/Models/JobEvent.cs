@@ -162,4 +162,34 @@ public class JobEvent
                 return IsLate ? Constant.StatusColors.DANGER : Constant.StatusColors.SUCCESS;
         }
     }
+    
+    public bool CanEdit
+    {
+        get
+        {
+            return IsCompleted ? CanUnRegister : CanRegister;
+        }
+        set { } //Added for compiled bindings
+    }
+    
+    public bool CanUnRegister
+    {
+        get
+        {
+            if (!IsCompleted || !RegisterAllowed)
+                return false;
+            return true;
+        }
+        set { } //Added for compiled bindings
+    }
+    
+    public bool IsChecked
+    {
+        get
+        {
+            return IsCompleted;
+        }
+        set { } //Added for compiled bindings
+
+    }
 }

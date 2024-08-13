@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:fonts="clr-namespace:CollectionViewTestAppMAUI.Resources.Fonts"
+             xmlns:converters="clr-namespace:CollectionViewTestAppMAUI.Converters"
+             x:Class="CollectionViewTestAppMAUI.Views.CheckmarkView"
+             x:Name="CheckmarkControl">
+    <Image Style="{StaticResource ImageIconStyleSmall}" BindingContext="{x:Reference CheckmarkControl}">
+        <Image.Source>
+            <FontImageSource FontFamily="{StaticResource FontAwesome}"
+                             Size="{StaticResource FontButtonIconSizeSmall}"
+                             Color="{StaticResource ButtonIconColor}">
+                <FontImageSource.Glyph>
+                    <!-- Note the order the bindable properties are declared affects the value of CanEdit in the converter -->
+                    <Binding Path="IsChecked">
+                        <Binding.Converter>
+                            <!-- Also Note CanEdit for some reason needs ", Source={x:Reference CheckmarkControl}" 
+                            for it to work even though the binding context has been set the Image -->
+                            <converters:CheckMarkToGlyphConverter CanEdit="{Binding CanEdit, Source={x:Reference CheckmarkControl}}" />
+                        </Binding.Converter>
+                    </Binding>
+                </FontImageSource.Glyph>
+            </FontImageSource>
+        </Image.Source>
+        <Image.Triggers>
+            <MultiTrigger TargetType="Image">
+                <!-- Hide Icon when IsChecked=False and CanEdit=False -->
+                <MultiTrigger.Conditions>
+                    <BindingCondition Binding="{Binding IsChecked}" Value="False"/> 
+                    <BindingCondition Binding="{Binding CanEdit}" Value="False"/>
+                </MultiTrigger.Conditions>
+                <Setter Property="IsVisible" Value="False"/>
+            </MultiTrigger>
+        </Image.Triggers>
+    </Image>
+</ContentView>

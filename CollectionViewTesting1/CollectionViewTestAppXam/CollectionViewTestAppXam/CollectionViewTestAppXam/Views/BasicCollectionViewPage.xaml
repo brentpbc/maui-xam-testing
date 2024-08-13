@@ -7,7 +7,7 @@
     xmlns:models="clr-namespace:CollectionViewTestAppXam.Models"
     x:Class="CollectionViewTestAppXam.Views.BasicCollectionViewPage"    
     BackgroundColor="LightGray"
-    Title="Basic CollectionView Page"
+    Title="Basic CV Xam Page"
     x:DataType="viewmodel:EventTestViewModel">
     <ContentPage.Content>
         <Grid>
