@@ -5,6 +5,7 @@
              xmlns:v="clr-namespace:CollectionViewTestAppMAUI.Views"
              xmlns:viewmodel="clr-namespace:CollectionViewTestAppMAUI.ViewModels"
              xmlns:model="clr-namespace:CollectionViewTestAppMAUI.Models"
+             xmlns:fonts="clr-namespace:CollectionViewTestAppMAUI.Resources.Fonts"
              x:Class="CollectionViewTestAppMAUI.Views.CollectionView2Page"
              x:DataType="viewmodel:EventTestViewModel"
              Title="CollectionView 2 Page">
@@ -96,32 +97,29 @@
                                                Text="{Binding DueDays}"/>
                                         
                                         <!-- Event Icons -->
-                                        <!--
-                                        TODO Implement
-                                        <HorizontalStackLayout Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" VerticalOptions="Center" HorizontalOptions="End">
-                                            <Image                                
-                                               IsVisible="{Binding Event.HasChildEvents}">
+                                        <HorizontalStackLayout Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Spacing="{StaticResource SpacingSmall}" VerticalOptions="Center" HorizontalOptions="End">
+                                            <Image IsVisible="{Binding HasChildEvents}">
                                                 <Image.Source>
                                                     <FontImageSource
                                                                 FontFamily="{StaticResource FontAwesome}"
-                                                                Glyph="{x:Static commonFonts:FontAwesomeIcons.ClipboardList}"
+                                                                Glyph="{x:Static fonts:FontAwesomeIcons.ClipboardList}"
                                                                 Size="{StaticResource FontButtonIconSizeExtraSmall}"
-                                                                Color="{AppThemeBinding Light={DynamicResource ButtonIconColor}, Dark={DynamicResource ButtonIconColorLightSecondary}}" />
+                                                                Color="{StaticResource  ButtonIconColor}" />
                                                 </Image.Source>
                                             </Image>
                                             <Image
                                                VerticalOptions="Center" 
                                                HorizontalOptions="End" 
-                                               IsVisible="{Binding Event.WkNotes, Converter={StaticResource hasValue}}">
+                                               IsVisible="{Binding Notes, Converter={StaticResource HasValue}}">
                                                 <Image.Source>
                                                     <FontImageSource
                                                                 FontFamily="{StaticResource FontAwesome}"
-                                                                Glyph="{x:Static commonFonts:FontAwesomeIcons.PenToSquare}"
+                                                                Glyph="{x:Static fonts:FontAwesomeIcons.PenToSquare}"
                                                                 Size="{StaticResource FontButtonIconSizeExtraSmall}"
-                                                                Color="{AppThemeBinding Light={DynamicResource ButtonIconColor}, Dark={DynamicResource ButtonIconColorLightSecondary}}" />
+                                                                Color="{StaticResource ButtonIconColor}" />
                                                 </Image.Source>
                                             </Image>
-                                        </HorizontalStackLayout>-->
+                                        </HorizontalStackLayout>
                                     </Grid>                    
                                 </Grid>
                             </Frame>
