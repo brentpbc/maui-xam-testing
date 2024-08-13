@@ -21,8 +21,9 @@ namespace CollectionViewTestAppXam
             await Navigation.PushAsync(new BasicCollectionViewPage());
         }
 
-        void collectionView2PageButton_OnClicked(System.Object sender, System.EventArgs e)
+        async void collectionView2PageButton_OnClicked(System.Object sender, System.EventArgs e)
         {
+            await Navigation.PushAsync(new CollectionView2Page());
         }
     }
 }

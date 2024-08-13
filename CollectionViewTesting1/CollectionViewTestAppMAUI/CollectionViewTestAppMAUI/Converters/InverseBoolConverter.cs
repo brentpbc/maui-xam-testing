@@ -2,7 +2,7 @@ using System.Globalization;
 
 namespace CollectionViewTestAppMAUI.Converters;
 
-class InverseBooleanConverter : IValueConverter
+public class InverseBooleanConverter : IValueConverter
 {
     public object Convert(object value, Type targetType,
         object parameter, CultureInfo culture)

@@ -5,10 +5,10 @@ using Xamarin.Forms;
 
 namespace CollectionViewTestAppXam.Views
 {	
-	public partial class BasicCollectionViewPage : BasePage
+	public partial class CollectionView2Page : BasePage
 	{
         EventTestViewModel ViewModel;
-        public BasicCollectionViewPage()
+        public CollectionView2Page()
         {
             InitializeComponent();
             BindingContext = ViewModel = new EventTestViewModel();

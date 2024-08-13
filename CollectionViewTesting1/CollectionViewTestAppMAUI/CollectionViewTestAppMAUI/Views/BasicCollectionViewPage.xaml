@@ -10,7 +10,7 @@
              BackgroundColor="LightGray"
              Title="Basic CollectionView Page">
     <ContentPage.Content>
-        <Grid>
+        <Grid >
             <CollectionView 
                 ItemsSource="{Binding Events}"
                 ItemSizingStrategy="MeasureFirstItem">
