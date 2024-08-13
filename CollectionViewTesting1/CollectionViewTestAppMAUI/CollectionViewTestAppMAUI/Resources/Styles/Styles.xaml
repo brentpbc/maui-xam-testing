@@ -82,6 +82,7 @@
         <Setter Property="Margin" Value="0"/>
     </Style>
     
+    <!-- Images -->
     <Style x:Key="ImageIconStyleSmall" TargetType="Image">
         <Setter Property="Margin" Value="0"/>
         <Setter Property="BackgroundColor" Value="Transparent"/>

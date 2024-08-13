@@ -1,11 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?>
-
-<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:converters="clr-namespace:CollectionViewTestAppMAUI.Converters"
-             x:Class="CollectionViewTestAppMAUI.Views.CheckmarkView"
-             x:Name="CheckmarkControl">
-    <Image Style="{StaticResource ImageIconStyleSmall}" BindingContext="{x:Reference CheckmarkControl}">
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:converters="clr-namespace:CollectionViewTestAppXam.Converters"
+    x:Class="CollectionViewTestAppXam.Views.CheckmarkView"
+    x:Name="CheckmarkControl">
+    <ContentView.Content>
+        <Image Style="{StaticResource ImageIconStyleSmall}" BindingContext="{x:Reference CheckmarkControl}">
         <Image.Source>
             <FontImageSource FontFamily="{StaticResource FontAwesome}"
                              Size="{StaticResource FontButtonIconSizeSmall}"
@@ -32,5 +33,7 @@
                 <Setter Property="IsVisible" Value="False"/>
             </MultiTrigger>
         </Image.Triggers>
-    </Image>
+        </Image>
+    </ContentView.Content>
 </ContentView>
+

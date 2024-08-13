@@ -1,7 +1,6 @@
-using CollectionViewTestAppMAUI.Resources.Fonts;
-
-namespace CollectionViewTestAppMAUI.Converters;
 using System.Globalization;
+using CollectionViewTestAppMAUI.Resources.Fonts;
+namespace CollectionViewTestAppMAUI.Converters;
 public class CheckMarkToGlyphConverter : BindableObject, IValueConverter
 {
     public static readonly BindableProperty CanEditProperty =
