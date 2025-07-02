@@ -2,10 +2,11 @@
 
 <ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:v="clr-namespace:CollectionViewTestAppMAUI.Views"
              xmlns:converters="clr-namespace:CollectionViewTestAppMAUI.Converters"
              x:Class="CollectionViewTestAppMAUI.Views.CheckmarkView"
              x:Name="CheckmarkControl">
-    <Image Style="{StaticResource ImageIconStyleSmall}" BindingContext="{x:Reference CheckmarkControl}">
+    <Image Style="{StaticResource ImageIconStyleSmall}" BindingContext="{x:Reference CheckmarkControl}" x:DataType="v:CheckmarkView">
         <Image.Source>
             <FontImageSource FontFamily="{StaticResource FontAwesome}"
                              Size="{StaticResource FontButtonIconSizeSmall}"
@@ -16,7 +17,7 @@
                         <Binding.Converter>
                             <!-- Also Note CanEdit for some reason needs ", Source={x:Reference CheckmarkControl}" 
                             for it to work even though the binding context has been set the Image -->
-                            <converters:CheckMarkToGlyphConverter CanEdit="{Binding CanEdit, Source={x:Reference CheckmarkControl}}" />
+                            <converters:CheckMarkToGlyphConverter CanEdit="{Binding CanEdit, Source={x:Reference CheckmarkControl}, x:DataType=v:CheckmarkView}" />
                         </Binding.Converter>
                     </Binding>
                 </FontImageSource.Glyph>

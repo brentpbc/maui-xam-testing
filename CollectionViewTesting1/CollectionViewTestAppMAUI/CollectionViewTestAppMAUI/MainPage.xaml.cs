@@ -15,12 +15,12 @@ public partial class MainPage : ContentPage
 		base.OnAppearing();
 	}
 
-	async void collectionViewPageButton_OnClicked(object? sender, EventArgs e)
+	async void collectionViewPageButton_OnClicked(object sender, EventArgs e)
 	{
 		await Navigation.PushAsync(new BasicCollectionViewPage());
 	}
 
-	async void collectionView2PageButton_OnClicked(object? sender, EventArgs e)
+	async void collectionView2PageButton_OnClicked(object sender, EventArgs e)
 	{
 		await Navigation.PushAsync(new CollectionView2Page());
 	}
